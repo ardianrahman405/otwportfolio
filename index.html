@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Menu Navigasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="images/iconweb.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4A90E2',  // Bisa sesuaikan dengan warna brand portfolio
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tailwind custom styles */
+        .navbar {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Tali lurus di setiap ujung kartu */
+        .card {
+            position: relative;
+            overflow: hidden;
+            /* Menghindari tali keluar dari area kartu */
+        }
+
+        /* Tali di atas dan bawah */
+        .card .tali-atas,
+        .card .tali-bawah {
+            position: absolute;
+            height: 4px;
+            background-color: #4A90E2;
+            /* Warna tali */
+            transition: width 0.4s ease;
+            /* Efek transisi halus */
+        }
+
+        .card .tali-atas {
+            top: 0;
+            left: 0;
+            width: 0;
+        }
+
+        .card .tali-bawah {
+            bottom: 0;
+            left: 0;
+            width: 0;
+        }
+
+        /* Tali kiri dan kanan */
+        .card .tali-kiri,
+        .card .tali-kanan {
+            position: absolute;
+            width: 4px;
+            background-color: #4A90E2;
+            /* Warna tali */
+            transition: height 0.4s ease;
+            /* Efek transisi halus */
+        }
+
+        .card .tali-kiri {
+            left: 0;
+            top: 0;
+            height: 0;
+        }
+
+        .card .tali-kanan {
+            right: 0;
+            top: 0;
+            height: 0;
+        }
+
+        /* Menambah efek tali yang lebih panjang saat hover */
+        .card:hover .tali-atas {
+            width: 100%;
+            /* Memperpanjang tali atas */
+        }
+
+        .card:hover .tali-bawah {
+            width: 100%;
+            /* Memperpanjang tali bawah */
+        }
+
+        .card:hover .tali-kiri {
+            height: 100%;
+            /* Memperpanjang tali kiri */
+        }
+
+        .card:hover .tali-kanan {
+            height: 100%;
+            /* Memperpanjang tali kanan */
+        }
+
+        /* Efek tambahan saat hover pada gambar dan kartu */
+        .card:hover .card-image {
+            transform: scale(1.1);
+            /* Memperbesar gambar saat hover */
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="navbar fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center text-2xl font-semibold text-primary">
+                <img src="images/logopribadi.png" class="w-12 mr-2"> <!-- Tambahkan margin-right -->
+                <a href="#">Ardian's Rahman</a>
+            </div>
+
+            <!-- Menu for large screens -->
+            <ul class="hidden md:flex space-x-6 text-gray-700">
+                <li><a href="#home" class="hover:text-primary">Home</a></li>
+                <li><a href="#about" class="hover:text-primary">About Me</a></li>
+                <li><a href="#skills" class="hover:text-primary">Skills</a></li>
+                <li><a href="#projects" class="hover:text-primary">Projects</a></li>
+                <li><a href="#certification" class="hover:text-primary">Certification</a></li>
+            </ul>
+
+            <!-- Hamburger Icon for mobile -->
+            <button id="hamburger" class="md:hidden text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white w-full py-4 px-6 space-y-4 text-center text-gray-700 hidden">
+            <a href="#home" class="block hover:text-primary">Home</a>
+            <a href="#about" class="block hover:text-primary">About Me</a>
+            <a href="#skills" class="block hover:text-primary">Skills</a>
+            <a href="#projects" class="block hover:text-primary">Projects</a>
+            <a href="#certification" class="block hover:text-primary">Certification</a>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section id="home"
+        class="h-screen bg-sky-50 text-center flex items-center justify-center relative overflow-hidden px-4 sm:px-10">
+        <!-- Background Animation -->
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary to-cyan-300 opacity-60 z-0 animate-pulse">
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="z-10 text-center space-y-6">
+
+            <!-- Foto dengan Frame Membulat dan Efek Hover -->
+            <div
+                class="mx-auto w-64 h-64 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl transform transition duration-500 hover:scale-110 hover:rotate-12">
+                <img src="images/profil.jpg" alt="Foto Profil" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Nama dengan Animasi Fade In -->
+            <h1 class="text-4xl sm:text-5xl font-bold text-white animate__animated animate__fadeIn animate__delay-1s">
+                Hi, I'm Ardian Rahman
+            </h1>
+
+            <!-- Deskripsi dengan Animasi Ketik -->
+            <div class="text-lg sm:text-xl text-gray-800">
+                <p class="typing-animation">
+                    Beginner | Frontend Web Developer & Network Engineer
+                </p>
+            </div>
+
+            <!-- Tombol untuk Scroll ke Section Lain -->
+            <a href="#about"
+                class="mt-6 inline-block bg-primary text-white px-7 py-3 rounded-full text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-110">
+                Learn More About Me
+            </a>
+        </div>
+    </section>
+
+
+    <section id="about" class="h-screen bg-white text-center flex items-center justify-center">
+        <section class="max-w-7xl mx-auto px-6">
+            <div
+                class="relative bg-white rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row transform transition-all duration-300 hover:scale-105 hover:shadow-2xl card">
+
+                <!-- Tali Lurus pada Ujung Kartu -->
+                <div class="tali-atas"></div>
+                <div class="tali-bawah"></div>
+                <div class="tali-kiri"></div>
+                <div class="tali-kanan"></div>
+
+                <!-- Foto Kiri dengan Hover Effect -->
+                <div class="md:w-1/3 overflow-hidden relative">
+                    <img src="images/about.jpg" alt="Foto Profil"
+                        class="object-cover w-full h-full transition-transform duration-500 hover:scale-110 card-image">
+                </div>
+
+                <!-- Konten Card Kanan -->
+                <div class="md:w-2/3 p-8">
+                    <h2 class="text-4xl font-semibold text-gray-800 mb-4">About Me</h2>
+                    <p class="text-gray-600 mb-6">
+                        Hello! I am John Doe, a passionate web developer with a keen interest in creating beautiful and
+                        functional websites. I have experience working with various web technologies such as HTML, CSS,
+                        JavaScript, and React. My goal is to bring creative ideas to life through code, ensuring the
+                        user experience is at the forefront of everything I do.
+                    </p>
+                    <p class="text-gray-600">
+                        In my free time, I enjoy exploring new technologies, learning new programming languages, and
+                        contributing to open-source projects. Feel free to connect with me!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <section id="skills" class="h-screen bg-gray-200 text-center flex items-center justify-center">
+        <h1 class="text-3xl">Skills</h1>
+    </section>
+
+    <section id="projects" class="h-screen bg-white text-center flex items-center justify-center">
+        <h1 class="text-3xl">Projects</h1>
+    </section>
+
+    <section id="certification" class="h-screen bg-gray-200 text-center flex items-center justify-center">
+        <h1 class="text-3xl">Certification</h1>
+    </section>
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
