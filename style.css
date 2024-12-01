@@ -82,9 +82,85 @@ h2 {
 
 /* Mengurangi jarak antar paragraf */
 p {
-  margin-bottom: 12px; 
-  margin-top: -8px;/* Mengurangi jarak antar paragraf */
+  margin-bottom: 16px; 
+  margin-top: -12px;/* Mengurangi jarak antar paragraf */
 }
 /* Akhir Section About Me */
 /* Akhir Section About Me */
 /* Akhir Section About Me */
+
+
+/* Section Styling */
+#skills {
+  padding-top: 26rem; /* Add padding on top */
+  padding-bottom: 4rem; /* Add padding at the bottom */
+  background-color: #f7fafc; /* Gray background */
+}
+
+/* Grid Layout */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  gap: 2rem; /* Space between the cards */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+  /* Ensure proper spacing between cards on mobile */
+  .skill-card {
+    margin-bottom: 16px; /* Margin to avoid overlapping with other elements */
+  }
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px); /* Blurring background */
+  margin-bottom: 24px; /* Ensure each card has space at the bottom */
+}
+
+.skill-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Container */
+.icon-container {
+  margin-bottom: 12px;
+}
+
+.icon-container i,
+.icon-container img {
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .icon-container i,
+.skill-card:hover .icon-container img {
+  transform: scale(1.2);
+}
+
+/* Skill Title and Description */
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+p {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-top: 8px;
+}

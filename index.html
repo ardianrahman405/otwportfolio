@@ -182,7 +182,8 @@
                 <p class="typing-animation">
                     Beginner | Frontend Web Developer & Network Engineer
                 </p>
-                <i>Saya membuat Halaman Website ini sepenuh Hati dan atas kemauan diri saya sendiri untuk belajar membangun Web Portfolio yang Sederhana</i>
+                <i>Saya membuat Halaman Website ini sepenuh Hati dan atas kemauan diri saya sendiri untuk belajar
+                    membangun Web Portfolio yang Sederhana</i>
             </div>
 
             <!-- Tombol untuk Scroll ke Section Lain -->
@@ -239,7 +240,64 @@
 
 
     <section id="skills" class="h-screen bg-gray-200 text-center flex items-center justify-center">
-        <h1 class="text-3xl">Skills</h1>
+        <section id="skills" class="py-16 bg-gray-50 text-center">
+            <h2 class="text-4xl font-semibold mb-12">My Skills</h2>
+            <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- HTML Skill -->
+              <div class="skill-card">
+                <div class="icon-container">
+                  <i class="fab fa-html5 fa-4x text-orange-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold">HTML</h3>
+                <p class="text-gray-600">Mark up your web with semantic HTML5</p>
+              </div>
+          
+              <!-- CSS Skill -->
+              <div class="skill-card">
+                <div class="icon-container">
+                  <i class="fab fa-css3-alt fa-4x text-blue-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold">CSS</h3>
+                <p class="text-gray-600">Style your web with beautiful CSS3</p>
+              </div>
+          
+              <!-- JavaScript Skill -->
+              <div class="skill-card">
+                <div class="icon-container">
+                  <i class="fab fa-js fa-4x text-yellow-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold">JavaScript</h3>
+                <p class="text-gray-600">Make interactive websites with JavaScript</p>
+              </div>
+          
+              <!-- Bootstrap Skill -->
+              <div class="skill-card">
+                <div class="icon-container">
+                  <i class="fab fa-bootstrap fa-4x text-purple-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold">Bootstrap</h3>
+                <p class="text-gray-600">Build responsive layouts with Bootstrap</p>
+              </div>
+          
+              <!-- Figma Skill -->
+              <div class="skill-card">
+                <div class="icon-container">
+                  <img src="images/Icon.png" alt="Figma" class="w-16 h-16 mx-auto">
+                </div>
+                <h3 class="text-xl font-semibold">Figma</h3>
+                <p class="text-gray-600">Design with Figma for user interfaces</p>
+              </div>
+          
+              <!-- TailwindCSS Skill -->
+              <div class="skill-card">
+                <div class="icon-container">
+                  <img src="images/tailwind.png" alt="TailwindCSS" class="w-16 h-16 mx-auto">
+                </div>
+                <h3 class="text-xl font-semibold">TailwindCSS</h3>
+                <p class="text-gray-600">Build UI with utility-first TailwindCSS</p>
+              </div>
+            </div>
+          </section>          
     </section>
 
     <section id="projects" class="h-screen bg-white text-center flex items-center justify-center">
@@ -258,6 +316,45 @@
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+
+        // Script untuk animasi muncul saat scroll
+        const skills = document.querySelectorAll('.skill-card');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skills.forEach(skill => {
+            observer.observe(skill);
+        });
+
+
+
+        //untuk my skills
+        // Script untuk animasi muncul saat scroll
+        const skills = document.querySelectorAll('.skill-card');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skills.forEach(skill => {
+            observer.observe(skill);
+        });
+        // akhir my skills
+
+
     </script>
 </body>
 
