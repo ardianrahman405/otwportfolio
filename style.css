@@ -82,7 +82,8 @@ h2 {
 
 /* Mengurangi jarak antar paragraf */
 p {
-  margin-bottom: 10px; /* Mengurangi jarak antar paragraf */
+  margin-bottom: 12px; 
+  margin-top: -8px;/* Mengurangi jarak antar paragraf */
 }
 /* Akhir Section About Me */
 /* Akhir Section About Me */
