@@ -26,11 +26,58 @@
             transition: all 0.3s ease-in-out;
         }
 
-        /* Tali lurus di setiap ujung kartu */
-        .card {
-            position: relative;
-            overflow: hidden;
-            /* Menghindari tali keluar dari area kartu */
+        .text-primary {
+            color: #3490dc;
+            /* Contoh warna utama */
+        }
+
+        .hover\:text-primary:hover {
+            color: #3490dc;
+            /* Contoh warna utama saat hover */
+        }
+
+        /* Animasi untuk menu mobile */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s forwards;
+        }
+
+        .slide-out {
+            animation: slideOut 0.5s forwards;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Tali di atas dan bawah */
@@ -117,7 +164,7 @@
     <nav class="navbar fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
             <div class="flex items-center text-2xl font-semibold text-primary">
-                <img src="images/logopribadi.png" class="w-12 mr-2"> <!-- Tambahkan margin-right -->
+                <img src="images/logopribadi.png" class="w-12 mr-2">
                 <a href="#">Ardian's Rahman</a>
             </div>
 
@@ -200,7 +247,7 @@
     <!-- Awal Section About Me -->
     <!-- Awal Section About Me -->
     <!-- Awal Section About Me -->
-    <section id="about" class="h-screen bg-white text-center flex items-center justify-center">
+    <section id="about" class="bg-white text-center flex items-center justify-center">
         <section class="max-w-7xl mx-auto px-6">
             <div
                 class="relative bg-white rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row transform transition-all duration-300 hover:scale-105 hover:shadow-2xl card">
@@ -239,65 +286,63 @@
     <!-- Akhir Section About Me -->
 
 
-    <section id="skills" class="h-screen bg-gray-200 text-center flex items-center justify-center">
-        <section id="skills" class="py-16 bg-gray-50 text-center">
-            <h2 class="text-4xl font-semibold mb-12">My Skills</h2>
-            <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <!-- HTML Skill -->
-              <div class="skill-card">
+    <section id="skills" class="py-19 bg-gray-50 text-center">
+        <h2 class="text-4xl font-semibold mb-12">My Skills</h2>
+        <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- HTML Skill -->
+            <div class="skill-card p-4">
                 <div class="icon-container">
-                  <i class="fab fa-html5 fa-4x text-orange-500"></i>
+                    <i class="fab fa-html5 fa-4x text-orange-500"></i>
                 </div>
                 <h3 class="text-xl font-semibold">HTML</h3>
                 <p class="text-gray-600">Mark up your web with semantic HTML5</p>
-              </div>
-          
-              <!-- CSS Skill -->
-              <div class="skill-card">
+            </div>
+
+            <!-- CSS Skill -->
+            <div class="skill-card p-4">
                 <div class="icon-container">
-                  <i class="fab fa-css3-alt fa-4x text-blue-500"></i>
+                    <i class="fab fa-css3-alt fa-4x text-blue-500"></i>
                 </div>
                 <h3 class="text-xl font-semibold">CSS</h3>
                 <p class="text-gray-600">Style your web with beautiful CSS3</p>
-              </div>
-          
-              <!-- JavaScript Skill -->
-              <div class="skill-card">
+            </div>
+
+            <!-- JavaScript Skill -->
+            <div class="skill-card p-4">
                 <div class="icon-container">
-                  <i class="fab fa-js fa-4x text-yellow-500"></i>
+                    <i class="fab fa-js fa-4x text-yellow-500"></i>
                 </div>
                 <h3 class="text-xl font-semibold">JavaScript</h3>
                 <p class="text-gray-600">Make interactive websites with JavaScript</p>
-              </div>
-          
-              <!-- Bootstrap Skill -->
-              <div class="skill-card">
+            </div>
+
+            <!-- Bootstrap Skill -->
+            <div class="skill-card p-4">
                 <div class="icon-container">
-                  <i class="fab fa-bootstrap fa-4x text-purple-600"></i>
+                    <i class="fab fa-bootstrap fa-4x text-purple-600"></i>
                 </div>
                 <h3 class="text-xl font-semibold">Bootstrap</h3>
                 <p class="text-gray-600">Build responsive layouts with Bootstrap</p>
-              </div>
-          
-              <!-- Figma Skill -->
-              <div class="skill-card">
+            </div>
+
+            <!-- Figma Skill -->
+            <div class="skill-card p-4">
                 <div class="icon-container">
-                  <img src="images/Icon.png" alt="Figma" class="w-16 h-16 mx-auto">
+                    <img src="images/Icon.png" alt="Figma" class="w-16 h-16 mx-auto">
                 </div>
                 <h3 class="text-xl font-semibold">Figma</h3>
                 <p class="text-gray-600">Design with Figma for user interfaces</p>
-              </div>
-          
-              <!-- TailwindCSS Skill -->
-              <div class="skill-card">
+            </div>
+
+            <!-- TailwindCSS Skill -->
+            <div class="skill-card p-4">
                 <div class="icon-container">
-                  <img src="images/tailwind.png" alt="TailwindCSS" class="w-16 h-16 mx-auto">
+                    <img src="images/tailwind.png" alt="TailwindCSS" class="w-16 h-16 mx-auto">
                 </div>
                 <h3 class="text-xl font-semibold">TailwindCSS</h3>
                 <p class="text-gray-600">Build UI with utility-first TailwindCSS</p>
-              </div>
             </div>
-          </section>          
+        </div>
     </section>
 
     <section id="projects" class="h-screen bg-white text-center flex items-center justify-center">
@@ -307,17 +352,42 @@
     <section id="certification" class="h-screen bg-gray-200 text-center flex items-center justify-center">
         <h1 class="text-3xl">Certification</h1>
     </section>
-
     <script>
-        // Toggle mobile menu
+        // Dapatkan elemen hamburger dan menu mobile
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuItems = document.querySelectorAll('.menu-item'); // Ambil semua item menu
 
+        // Fungsi untuk menutup menu
+        function closeMenu() {
+            mobileMenu.classList.remove('slide-in');
+            mobileMenu.classList.add('slide-out');
+            // Tambahkan delay sebelum menambahkan kelas 'hidden' agar animasi bisa berjalan
+            mobileMenu.addEventListener('animationend', function () {
+                mobileMenu.classList.add('hidden');
+            }, { once: true });
+        }
+
+        // Tambahkan event listener untuk klik pada hamburger
         hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.remove('slide-out');
+                mobileMenu.classList.add('slide-in');
+            } else {
+                closeMenu();
+            }
         });
 
+        // Tambahkan event listener untuk klik pada setiap item menu
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                closeMenu(); // Menutup menu saat item diklik
+            });
+        });
+    </script>
 
+    <script>
         // Script untuk animasi muncul saat scroll
         const skills = document.querySelectorAll('.skill-card');
 
