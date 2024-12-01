@@ -6,3 +6,42 @@
 .fade-visible {
   opacity: 1;
 }
+
+/* Mengurangi tinggi dari section dengan id 'about' */
+#about {
+  padding-top: 40px; /* Atur padding sesuai kebutuhan */
+  padding-bottom: 40px; /* Atur padding sesuai kebutuhan */
+  height: auto; /* Menghilangkan h-screen agar lebih fleksibel */
+}
+
+/* Mengurangi margin dan padding dari card */
+.card {
+  margin: 0; /* Mengurangi margin */
+  padding: 16px; /* Mengurangi padding */
+}
+
+/* Mengurangi padding dan margin pada div yang membungkus gambar */
+.md\:w-1\/3 {
+  padding: 0; /* Mengurangi padding jika ada */
+}
+
+/* Mengurangi padding di kanan pada konten */
+.md\:w-2\/3 {
+  padding: 20px; /* Bisa dikurangi agar ruang lebih rapat */
+}
+
+/* Mengurangi spasi antar elemen dalam card */
+.card-image {
+  padding: 0;
+  margin: 0;
+}
+
+/* Mengurangi jarak vertikal antara teks */
+h2 {
+  margin-bottom: 10px; /* Mengurangi jarak antara judul dan paragraf */
+}
+
+/* Mengurangi jarak antar paragraf */
+p {
+  margin-bottom: 10px; /* Mengurangi jarak antar paragraf */
+}
