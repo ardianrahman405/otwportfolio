@@ -7,6 +7,45 @@
   opacity: 1;
 }
 
+/* Mengatur ulang padding pada section #home untuk memberi ruang lebih di atas foto */
+#home {
+  padding-top: 150px; /* Menambahkan padding atas lebih banyak untuk memberi ruang di atas foto */
+  padding-bottom: 20px; /* Mengurangi padding bawah agar lebih rapat */
+  height: auto; /* Menjaga tinggi otomatis agar konten menyesuaikan */
+}
+
+/* Foto Profil tetap besar seperti semula */
+#home .w-64, #home .h-64 {
+  width: 10rem; /* Ukuran foto tetap besar */
+  height: 10rem; /* Ukuran foto tetap besar */
+}
+
+/* Foto di layar kecil */
+#home .sm\:w-48, #home .sm\:h-48 {
+  width: 12rem; /* Ukuran foto tetap besar untuk layar kecil */
+  height: 12rem; /* Ukuran foto tetap besar untuk layar kecil */
+}
+
+/* Mengurangi margin antara nama dan deskripsi */
+h1 {
+  margin-bottom: 8px; /* Mengurangi margin bawah antara nama dan deskripsi */
+}
+
+/* Mengurangi margin antara deskripsi dan tombol */
+#home .text-lg {
+  margin-bottom: 6px; /* Mengurangi margin bawah pada deskripsi */
+}
+
+/* Tombol Learn More About Me - Mengurangi margin bawah */
+#home a {
+  padding: 12px 24px; /* Ukuran padding tombol tetap nyaman */
+  margin-top: 15px; /* Mengurangi jarak atas tombol agar lebih rapat */
+  margin-bottom: 10px; /* Mengurangi jarak bawah tombol */
+}
+
+/* Awal Section About Me */
+/* Awal Section About Me */
+/* Awal Section About Me */
 /* Mengurangi tinggi dari section dengan id 'about' */
 #about {
   padding-top: 40px; /* Atur padding sesuai kebutuhan */
@@ -45,3 +84,6 @@ h2 {
 p {
   margin-bottom: 10px; /* Mengurangi jarak antar paragraf */
 }
+/* Akhir Section About Me */
+/* Akhir Section About Me */
+/* Akhir Section About Me */
