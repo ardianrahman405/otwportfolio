@@ -44,3 +44,5 @@ function showDetails(projectId) {
 function closeDetails() {
     document.getElementById("project-details-modal").style.display = "none";
 }
+
+

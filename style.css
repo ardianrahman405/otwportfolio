@@ -309,3 +309,37 @@ body {
   cursor: pointer;
 }
 
+/* Card Projects */
+/* Card Projects */
+/* Card Projects */
+.project-card img {
+  transition: filter 0.3s ease; /* Menambahkan transisi untuk efek filter */
+}
+
+.project-card:hover img {
+  filter: blur(0.9px); /* Mengubah gambar menjadi buram saat hover */
+}
+
+.project-card {
+  position: relative; /* Agar ikon bisa diposisikan secara absolut */
+  overflow: hidden; /* Untuk menyembunyikan ikon di luar area kartu */
+}
+
+.link-icon {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Sembunyikan ikon secara default */
+  transition: opacity 0.3s ease; /* Transisi untuk efek muncul */
+  color: rgb(182, 182, 182); /* Ganti warna ikon sesuai kebutuhan */
+  pointer-events: none; /* Agar klik tidak mengganggu interaksi lain */
+}
+
+.project-card:hover .link-icon {
+  opacity: 1; /* Tampilkan ikon saat hover */
+  pointer-events: auto; /* Aktifkan interaksi saat ikon muncul */
+}
+/* end Card Projects */
+/* end Card Projects */
+/* end Card Projects */
