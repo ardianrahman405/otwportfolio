@@ -215,9 +215,12 @@
 
             <!-- Foto dengan Frame Membulat dan Efek Hover -->
             <div
-                class="mx-auto w-64 h-64 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-2xl transform transition duration-500 hover:scale-110 hover:rotate-12">
+                class="mx-auto w-64 h-64 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-[0_0_30px_#0002A1] transform transition duration-500 hover:scale-110 hover:rotate-12 hover:shadow-[0_0_20px_#7900FF]">
                 <img src="images/profil.jpg" alt="Foto Profil" class="w-full h-full object-cover">
             </div>
+
+
+
 
             <!-- Nama dengan Animasi Fade In -->
             <h1 class="text-4xl sm:text-5xl font-bold text-white animate__animated animate__fadeIn animate__delay-1s">
@@ -356,7 +359,7 @@
     <section id="projects" class="bg-white text-center flex items-center justify-center">
         <section id="projects">
             <h2 class="text-4xl font-semibold mb-6">Projects</h2>
-            <div class="projects-container">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <div class="project-card" onclick="showDetails('project1')">
                     <img src="images/projects1.png" alt="Project 1">
                     <div class="card-content">
