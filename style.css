@@ -43,6 +43,11 @@ h1 {
   margin-bottom: 10px; /* Mengurangi jarak bawah tombol */
 }
 
+.jarak {
+  margin-top: 20px; /* Atur jarak sesuai kebutuhan */
+  font-size: 20px;
+}
+
 /* Awal Section About Me */
 /* Awal Section About Me */
 /* Awal Section About Me */
