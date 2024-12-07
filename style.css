@@ -184,8 +184,8 @@ body {
 }
 
 #projects h2 {
-  margin-bottom: 30px;
-  margin-top: -150px;
+
+  
   color: #333;
 }
 
@@ -314,37 +314,23 @@ body {
   cursor: pointer;
 }
 
-/* Card Projects */
-/* Card Projects */
-/* Card Projects */
-.project-card img {
-  transition: filter 0.3s ease; /* Menambahkan transisi untuk efek filter */
-}
+   /* Card Hover Effect */
+   .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    background-color: #f9fafb;
+  }
 
-.project-card:hover img {
-  filter: blur(0.9px); /* Mengubah gambar menjadi buram saat hover */
-}
-
-.project-card {
-  position: relative; /* Agar ikon bisa diposisikan secara absolut */
-  overflow: hidden; /* Untuk menyembunyikan ikon di luar area kartu */
-}
-
-.link-icon {
-  position: absolute;
-  top: 33%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0; /* Sembunyikan ikon secara default */
-  transition: opacity 0.3s ease; /* Transisi untuk efek muncul */
-  color: rgb(182, 182, 182); /* Ganti warna ikon sesuai kebutuhan */
-  pointer-events: none; /* Agar klik tidak mengganggu interaksi lain */
-}
-
-.project-card:hover .link-icon {
-  opacity: 1; /* Tampilkan ikon saat hover */
-  pointer-events: auto; /* Aktifkan interaksi saat ikon muncul */
-}
+  /* Hover Effect on Button */
+  .card-button {
+    transition: transform 0.3s ease;
+  }
+  .card:hover .card-button {
+    transform: scale(1.1);
+  }
 /* end Card Projects */
 /* end Card Projects */
 /* end Card Projects */
