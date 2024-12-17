@@ -1,0 +1,19 @@
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar-transparent {
+    opacity: 0.9; /* Set opacity sesuai kebutuhan */
+  }
+  
+  
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-visible {
+    opacity: 1;
+  }
