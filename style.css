@@ -361,4 +361,48 @@ body {
 /* end Card Projects */
 
 /* Start sertifikat section */
+.certification-section {
+  display: flex;
+  flex-direction: column; /* Mengatur arah kolom */
+  align-items: center; /* Memusatkan item secara horizontal */
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: center; /* Memusatkan secara horizontal */
+  align-items: center;
+  margin-top: 20px; /* Tambahkan jarak atas jika diperlukan */
+  width: 100%;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Memusatkan tombol secara horizontal */
+  margin-top: 20px; /* Jarak atas tombol */
+}
+
+.see-more-button {
+  padding: 10px 20px;
+  background-color: #007BFF; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border: none;
+  border-radius: 5px; /* Sudut membulat */
+  cursor: pointer; /* Kursor tangan saat hover */
+  font-size: 16px; /* Ukuran font */
+  transition: background-color 0.3s; /* Transisi untuk efek hover */
+}
+
+.see-more-button:hover {
+  background-color: #0056b3; /* Warna saat hover */
+}
+
+/* Responsif */
+@media (max-width: 640px) {
+  .see-more-button {
+      width: 100%; /* Tombol mengambil lebar penuh pada layar kecil */
+      font-size: 14px; /* Ukuran font lebih kecil pada layar kecil */
+  }
+}
+
 /* Endsertifikat section */
